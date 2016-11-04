@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>付琦的个人相册</title>
+<style type="text/css">
+  body,h1,p { margin:0;}
+  body { background:url("img/bg.png"); background-size:100% 100%; width:100%; height:100%; background-attachment:fixed; font-size:16px;}
+
+  .head { position:fixed; width:100%; top:0; left:0;}
+  .head-bg { height:68px; background:#666;}
+  .head-face { position:absolute; top:0; left:50%; border:5px solid rgba(0,0,0,.5); border-radius:140px; margin-left:-68px;}
+  .head-face img { width:120px; height:120px; border:3px solid #fff; display:block; border-radius:120px;}
+
+  .my-info { width:1000px; margin:170px auto 0; color:#333; text-align:center; padding:20px 0 30px;}
+  .my-info h1 { margin:0; font-size:26px; line-height:2em;}
+  .my-info p { line-height:1.8em;}
+
+  .photos { width:1000px; margin:auto; padding-bottom:50px;}
+  .photos:after { display:block; clear:both; content:""; visibility:hidden; height:0;}
+
+  .photo-item { text-align:center; color:#333; line-height:1.8em; float:left; margin:50px 95px 0 0;}
+  .photo-item:nth-child(3n) { margin-right:0; }
+  .photo-item-image img { width:260px; height:auto; border:5px solid #ddd; box-shadow:3px 3px 5px rgba(0,0,0,.3); border-radius:6px;}
+  .photo-item-title { font-size:20px; padding-top:10px;}
+  .photo-item-type { color:#999; }
+</style>
+<link href="plugin/fancybox/jquery.fancybox.css" rel="stylesheet" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="plugin/fancybox/jquery.fancybox.js"></script>
+</head>
+
+<body>
+<div class="head">
+	<div class="head-bg"></div>
+	<div class="head-face"><img src="img/face.jpg" /></div>
+</div>
+
+
+<div class="my-info">
+	<h1>付琦的个人相册</h1>
+	<p>我是一个热爱和平的人，喜欢旅游、骑行、羽毛球，欢迎志同道合的人一起走遍全世界！<br />本相册是我家宝宝一岁照的精彩留念，愿宝宝健康快乐的成长！</p>
+</div>
+<div class="photos" id="js-photo">
+	<div class="photo-item">
+		<div class="photo-item-image"><a href="img/photo-1.jpg" target="_blank"><img src="img/photo-1.jpg" /></a></div>
+		<div class="photo-item-title">宝宝一岁照</div>
+		<div class="photo-item-type">2016-10-25 拍照于西安某照相馆</div>
+	</div>
+	<div class="photo-item">
+		<div class="photo-item-image"><a href="img/photo-2.jpg" target="_blank"><img src="img/photo-2.jpg" /></a></div>
+		<div class="photo-item-title">宝宝一岁照</div>
+		<div class="photo-item-type">2016-10-25 拍照于西安某照相馆</div>
+	</div>
+	<div class="photo-item">
+		<div class="photo-item-image"><a href="img/photo-3.jpg" target="_blank"><img src="img/photo-3.jpg" /></a></div>
+		<div class="photo-item-title">宝宝一岁照</div>
+		<div class="photo-item-type">2016-10-25 拍照于西安某照相馆</div>
+	</div>
+	<div class="photo-item">
+		<div class="photo-item-image"><a href="img/photo-4.jpg" target="_blank"><img src="img/photo-4.jpg" /></a></div>
+		<div class="photo-item-title">宝宝一岁照</div>
+		<div class="photo-item-type">2016-10-25 拍照于西安某照相馆</div>
+	</div>
+	<div class="photo-item">
+		<div class="photo-item-image"><a href="img/photo-5.jpg" target="_blank"><img src="img/photo-5.jpg" /></a></div>
+		<div class="photo-item-title">宝宝一岁照</div>
+		<div class="photo-item-type">2016-10-25 拍照于西安某照相馆</div>
+	</div>
+	<div class="photo-item">
+		<div class="photo-item-image"><a href="img/photo-6.jpg" target="_blank"><img src="img/photo-6.jpg" /></a></div>
+		<div class="photo-item-title">宝宝一岁照</div>
+		<div class="photo-item-type">2016-10-25 拍照于西安某照相馆</div>
+	</div>
+</div>
+
+<script>
+	var selector = $('#js-photo a');
+  selector.each(function(index,obj) {
+    if(/(.jpg|.png|.gif|.jpeg)$/ig.test(obj.href)) $(obj).fancybox();
+  });
+</script>
+</body>
+</html>
